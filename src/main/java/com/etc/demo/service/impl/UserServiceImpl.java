@@ -1,6 +1,8 @@
 package com.etc.demo.service.impl;
 
+import com.etc.demo.dao.AdressMapper;
 import com.etc.demo.dao.UsersDao;
+import com.etc.demo.entity.Adress;
 import com.etc.demo.entity.UserInfo;
 import com.etc.demo.entity.Users;
 import com.etc.demo.service.UserService;
@@ -12,7 +14,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UsersDao usersDao;
-
+    @Autowired
+    AdressMapper adressMapper;
     /*
      * @Author yucai
      * @Dream: Code like poem
@@ -35,5 +38,12 @@ public class UserServiceImpl implements UserService {
         Users users = new Users().setUName(nickName).setUA(avatarUrl).setUState(0);
         usersDao.insert(users);
         return users;
+    }
+
+    @Override
+    public Boolean saveAdress(Adress adress) {
+        int i = adressMapper.insert(adress);
+        if (i>=0) return true;
+        return false;
     }
 }

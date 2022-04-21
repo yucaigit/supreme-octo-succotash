@@ -26,9 +26,40 @@
         from attribute
         where  a_id = #{aId,jdbcType=INTEGER} 
     </select>
-    <select id="selectIdByName" resultType="int">
+    <select id="selectIdByName" resultType="java.lang.Integer">
         select a_id from attribute where a_name=#{name}
     </select>
+    <select id="findAll" resultMap="sortGoods">
+     select a.a_id,a.a_name,b.g_id,b.g_name,b.g_attributes,b.g_img1,b.g_price from attribute a left join goods b on
+          a.a_id = b.g_attributes
+    </select>
+    <resultMap id="sortGoods" type="com.etc.demo.entity.Attribute">
+        <id column="a_id" property="aId"></id>
+        <result column="a_name" property="aName"></result>
+        <collection property="goodsList" resultMap="sortMap2"></collection>
+    </resultMap>
+
+    <resultMap id="sortMap2" type="com.etc.demo.entity.Goods">
+        <id column="g_id" property="gId"></id>
+        <result column="g_name" property="gName"></result>
+        <result column="g_attributes" property="gAttributes"></result>
+        <result column="g_img1" property="gImg1"></result>
+        <result column="g_price" property="gPrice"></result>
+    </resultMap>
+    <!--        <select id="findAll" resultMap="sortGoods">-->
+<!--        select a.a_id,a.a_name,b.g_id,b.g_name,b.g_attributes from attribute a,goods b-->
+<!--        where a.a_id = b.g_attributes or a.a_id != null-->
+<!--    </select>-->
+
+<!--    <resultMap id="sortGoods" type="com.etc.demo.entity.Attribute">-->
+<!--        <id column="a_id" property="aId"></id>-->
+<!--        <result column="a_name" property="aName"></result>-->
+<!--        <collection property="goodsList" ofType="com.etc.demo.entity.Goods">-->
+<!--            <id column="g_id" property="gId"></id>-->
+<!--            <result column="g_name" property="gName"></result>-->
+<!--            <result column="g_attributes" property="gAttributes"></result>-->
+<!--        </collection>-->
+<!--    </resultMap>-->
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
         delete from attribute

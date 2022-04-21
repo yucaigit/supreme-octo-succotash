@@ -19,7 +19,6 @@ public class SellController {
 
     private static final String path = "D:\\E\\WorkPlace\\IdeaWorkPlace\\wxServerP\\src\\main\\resources\\static\\goodsImage\\";
     private static List<String> imgsList = new ArrayList<>();
-    ;
     private static Map<String, List<String>> goodsMap = new HashMap<>();
     private static String name1;
     private static Integer id1;
@@ -44,6 +43,7 @@ public class SellController {
 
     ) throws IOException {
         String originalFilename = null;
+        if (true) return null;
         if (!file.isEmpty()) {
             name1 = goodsName;
             price1 = price;
@@ -52,6 +52,7 @@ public class SellController {
             textarea1 = textarea;
             attribute1 = attribute;
             originalFilename = file.getOriginalFilename();
+
             imgsList.add(originalFilename);
             File file1 = new File(path + originalFilename);
             if (!file1.getParentFile().exists()) {
@@ -66,9 +67,9 @@ public class SellController {
 
     @RequestMapping("/saveGoods")
     public boolean saveGoods() {
+        if (true) return true;
         DateFormat dateFormat = new SimpleDateFormat();
         String senTime = dateFormat.format(new Date());
         return goodsService.saveGoods(name1, attribute1, imgsList.get(0), price1, senTime, id1, adress1, textarea1, imgsList);
     }
-
 }

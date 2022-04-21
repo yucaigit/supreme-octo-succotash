@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.etc.demo.dao.ImgsDao">
+<mapper namespace="com.etc.demo.dao.ImgsMapper">
     <resultMap id="BaseResultMap" type="com.etc.demo.entity.Imgs">
         <id column="img_id" jdbcType="INTEGER" property="imgId"/>
         <result column="img_src" jdbcType="VARCHAR" property="imgSrc"/>
@@ -43,6 +43,9 @@
                 #{gId,jdbcType=INTEGER},
             </if>
         </trim>
+    </insert>
+    <insert id="saveImges">
+        insert into imgs values (null ,#{param1},#{param2})
     </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.etc.demo.entity.Imgs">
         update imgs

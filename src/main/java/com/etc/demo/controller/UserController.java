@@ -1,5 +1,6 @@
 package com.etc.demo.controller;
 
+import com.etc.demo.entity.Adress;
 import com.etc.demo.entity.UserInfo;
 import com.etc.demo.entity.Users;
 import com.etc.demo.service.UserService;
@@ -18,12 +19,16 @@ public class UserController {
     RestTemplate restTemplate;
     @Autowired
     UserService userService;
-
     @RequestMapping("/wxLogin")
     public Users wxLogin(UserInfo userInfo) {
 //        返回一个用户对象
         Users user = userService.login(userInfo);
         return user;
+    }
+
+    @RequestMapping("/saveAdress")
+    public Boolean saveAdress(Adress adress){
+        return userService.saveAdress(adress);
     }
 }
 

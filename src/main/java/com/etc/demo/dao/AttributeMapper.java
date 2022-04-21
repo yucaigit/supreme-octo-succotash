@@ -4,6 +4,8 @@ import generator.domain.Attribute;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
 * @author yucai
 * @description 针对表【attribute】的数据库操作Mapper
@@ -27,4 +29,6 @@ public interface AttributeMapper {
     int updateByPrimaryKey(Attribute record);
 
     int selectIdByName(String name);
+
+    List<com.etc.demo.entity.Attribute> findAll();
 }

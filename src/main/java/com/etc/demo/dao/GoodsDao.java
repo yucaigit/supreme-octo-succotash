@@ -29,4 +29,8 @@ public interface GoodsDao {
     Goods findOne(Integer g_id);
 
     boolean saveGoods(String name, int gAttributes, String img1, String price, String senTime, Integer id, String adress, String textarea);
+
+    int selectgIdByName(String name,String img);
+
+
 }

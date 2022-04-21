@@ -3,6 +3,7 @@ package com.etc.demo.service.impl;
 import com.etc.demo.dao.AttributeMapper;
 import com.etc.demo.dao.GoodsDao;
 
+import com.etc.demo.dao.ImgsMapper;
 import com.etc.demo.entity.Goods;
 import com.etc.demo.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,8 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Autowired
     AttributeMapper attributeMapper;
+    @Autowired
+    ImgsMapper imgsMapper;
 
     @Override
     public void sum1(Integer g_id) {
@@ -47,10 +50,18 @@ public class GoodsServiceImpl implements GoodsService {
         return goodsDao.findOne(g_id);
     }
 
+//    保存商品 然后查询其商品Id 返回 再插入图片表中
     @Override
     public boolean saveGoods(String name, String attribute, String s, String price, String senTime, Integer id, String adress, String textarea, List<String> imgsList) {
         String img1 = localHostPath + s;
         int aid = attributeMapper.selectIdByName(attribute);
-        return goodsDao.saveGoods(name, aid, img1, price, senTime, id, adress, textarea);
+        boolean saveResult = goodsDao.saveGoods(name, aid, img1, price, senTime, id, adress, textarea);
+
+        int gId = goodsDao.selectgIdByName(name,img1);
+        System.out.println("返回了商品图片列表"+imgsList);
+        for (String str : imgsList){
+            imgsMapper.saveImges(localHostPath+str,gId);
+        }
+        return saveResult;
     }
 }
