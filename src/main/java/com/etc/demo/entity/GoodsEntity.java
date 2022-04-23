@@ -26,7 +26,7 @@ public class GoodsEntity implements Comparable<GoodsEntity> {
     private String g_date_down;
     private Integer g_uid;
     private String g_adress;
-    private String g_ifree;
+    private Integer g_ifree;
     private String g_change;
     private String g_state;
     //  热搜等级

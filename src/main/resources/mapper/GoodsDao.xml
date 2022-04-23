@@ -11,7 +11,7 @@
         <result column="g_date_down" jdbcType="VARCHAR" property="gDateDown"/>
         <result column="g_uid" jdbcType="INTEGER" property="gUid"/>
         <result column="g_adress" jdbcType="VARCHAR" property="gAdress"/>
-        <result column="g_ifree" jdbcType="VARCHAR" property="gIfree"/>
+        <result column="g_ifree" jdbcType="INTEGER" property="gIfree"/>
         <result column="g_change" jdbcType="VARCHAR" property="gChange"/>
         <result column="g_state" jdbcType="VARCHAR" property="gState"/>
         <result column="g_a" jdbcType="INTEGER" property="gA"/>

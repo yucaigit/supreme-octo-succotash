@@ -9,6 +9,7 @@ import com.etc.demo.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -63,5 +64,17 @@ public class GoodsServiceImpl implements GoodsService {
             imgsMapper.saveImges(localHostPath+str,gId);
         }
         return saveResult;
+    }
+
+    @Override
+    public List<Goods> getFreeGoods() {
+        List<Goods> list = goodsDao.getAllFree();
+        return list;
+    }
+
+    @Override
+    public List<Goods> selectLikeAdress(String adress) {
+        String str = "%"+adress+"%";
+        return goodsDao.seleAllLikeAdress(str);
     }
 }

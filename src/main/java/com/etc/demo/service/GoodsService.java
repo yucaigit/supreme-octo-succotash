@@ -19,4 +19,8 @@ public interface GoodsService {
     Goods findOne(Integer g_id);
 
     boolean saveGoods(String name, String attribute, String s, String price, String senTime, Integer id, String adress, String textarea, List<String> imgsList);
+
+    List<Goods> getFreeGoods();
+
+    List<Goods> selectLikeAdress(String adress);
 }

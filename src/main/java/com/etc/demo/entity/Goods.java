@@ -29,7 +29,7 @@ public class Goods implements Serializable {
 
     private String gAdress;
 
-    private String gIfree;
+    private Integer gIfree;
 
     private String gChange;
 

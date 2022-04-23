@@ -3,6 +3,8 @@ package com.etc.demo.dao;
 
 import com.etc.demo.entity.Goods;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -32,5 +34,12 @@ public interface GoodsDao {
 
     int selectgIdByName(String name,String img);
 
+    @Select("select *from goods")
+    List<Goods> getAll();
 
+    @Select("select *from goods where g_ifree = 1")
+    List<Goods> getAllFree();
+
+    @Select("select *from goods where g_adress like #{adress}")
+    List<Goods> seleAllLikeAdress(String adress);
 }

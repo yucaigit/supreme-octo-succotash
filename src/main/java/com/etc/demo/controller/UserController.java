@@ -1,11 +1,14 @@
 package com.etc.demo.controller;
 
 import com.etc.demo.entity.Adress;
+import com.etc.demo.entity.QiugouEntity;
 import com.etc.demo.entity.UserInfo;
 import com.etc.demo.entity.Users;
+import com.etc.demo.service.QiugouService;
 import com.etc.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -19,6 +22,11 @@ public class UserController {
     RestTemplate restTemplate;
     @Autowired
     UserService userService;
+
+    @Autowired
+    QiugouService qiugouService;
+
+
     @RequestMapping("/wxLogin")
     public Users wxLogin(UserInfo userInfo) {
 //        返回一个用户对象
@@ -29,6 +37,11 @@ public class UserController {
     @RequestMapping("/saveAdress")
     public Boolean saveAdress(Adress adress){
         return userService.saveAdress(adress);
+    }
+
+    @RequestMapping("/qiugou")
+    public Boolean qiuGou(QiugouEntity qiugouEntity){
+        return qiugouService.savaXuQiu(qiugouEntity);
     }
 }
 
