@@ -34,11 +34,12 @@ public class GoodsController {
         return list;
     }
 
-    /*得到全部上架商品*/
+    /*得到全部上架商品
+    * 这边需要 查询gb 为1 的
+    * */
     @RequestMapping("/getAll")
     public List<GoodsEntity> getAll() {
         List<GoodsEntity> all = jpaGoodsService.findAll();
-
         return all;
     }
 

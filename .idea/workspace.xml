@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8d988458-1e83-4db5-aa4b-6911d59dfcf0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/WxserverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/WxserverApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/config/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/config/MyConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/GoodsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/GoodsListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/SellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/SellController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/SortController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/SortController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/AttributeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/AttributeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/GoodsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/ImgsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/ImgsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/entity/Adress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/entity/Adress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/entity/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/entity/Goods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/entity/Imgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/entity/Imgs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/impl/AttributeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/impl/AttributeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/impl/GoodsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/impl/QiuGouServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/impl/QiuGouServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/utils/AesCbcUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/utils/AesCbcUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/generator/domain/Attribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/generator/domain/Attribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AdressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AdressMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AttributeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AttributeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/GoodsDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/GoodsDao.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="27pNH1aoG73PqOCtDBGjQHk7C2h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/etc/demo/utils" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\E\WorkPlace\IdeaWorkPlace\wxServerP\src\main\java\com\etc\demo\utils" />
+      <recent name="D:\E\WorkPlace\wxServerP\src\main\resources\static" />
+      <recent name="D:\E\WorkPlace\wxServerP\src\main\resources" />
+      <recent name="D:\E\WorkPlace\wxServerP\src\main\java\com\etc\demo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.etc.demo.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WxserverApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AttributeServiceImpl.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wxServerP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.etc.demo.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.etc.demo.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.etc.demo.service.impl.AttributeServiceImpl" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WxserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="wxServerP" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.etc.demo.WxserverApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AttributeServiceImpl.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8d988458-1e83-4db5-aa4b-6911d59dfcf0" name="Default Changelist" comment="" />
+      <created>1650012977502</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650012977502</updated>
+      <workItem from="1650012978582" duration="266000" />
+      <workItem from="1650013284755" duration="1222000" />
+      <workItem from="1650014580817" duration="844000" />
+      <workItem from="1650020691181" duration="377000" />
+      <workItem from="1650031372496" duration="1694000" />
+      <workItem from="1650033090820" duration="3366000" />
+      <workItem from="1650087180142" duration="11410000" />
+      <workItem from="1650173024484" duration="906000" />
+      <workItem from="1650188275336" duration="1222000" />
+      <workItem from="1650247191974" duration="5321000" />
+      <workItem from="1650333413559" duration="9018000" />
+      <workItem from="1650365337915" duration="699000" />
+      <workItem from="1650419738378" duration="1207000" />
+      <workItem from="1650506417182" duration="20693000" />
+      <workItem from="1650597129774" duration="14551000" />
+      <workItem from="1650680564866" duration="5591000" />
+      <workItem from="1650852331488" duration="184000" />
+      <workItem from="1650853667659" duration="1565000" />
+      <workItem from="1650856819890" duration="1999000" />
+      <workItem from="1650860656634" duration="332000" />
+      <workItem from="1650861197542" duration="530000" />
+      <workItem from="1650866949188" duration="162000" />
+      <workItem from="1650867337669" duration="896000" />
+      <workItem from="1650871828866" duration="2654000" />
+      <workItem from="1650874625045" duration="56000" />
+      <workItem from="1650874899717" duration="285000" />
+      <workItem from="1650880770993" duration="2491000" />
+      <workItem from="1650938192816" duration="25000" />
+      <workItem from="1650938353487" duration="6825000" />
+      <workItem from="1651026016157" duration="11512000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

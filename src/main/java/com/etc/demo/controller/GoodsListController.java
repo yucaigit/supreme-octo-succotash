@@ -20,17 +20,17 @@ public class GoodsListController {
     GoodsService goodsService;
 
     @RequestMapping("/notification")
-    public String requestNotification(){
+    public String requestNotification() {
         return qiugouService.getNotic();
     }
 
     @RequestMapping("/mianfei")
-    public List<Goods> getList(){
+    public List<Goods> getList() {
         return goodsService.getFreeGoods();
     }
 
     @RequestMapping("/toncheng")
-    public List<Goods> getToncheng(@RequestParam String adress){
+    public List<Goods> getToncheng(@RequestParam String adress) {
         return goodsService.selectLikeAdress(adress);
     }
 }

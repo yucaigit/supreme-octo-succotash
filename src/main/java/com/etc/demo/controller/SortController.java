@@ -15,7 +15,7 @@ public class SortController {
     AttributeService attributeService;
 
     @RequestMapping("/getsortList")
-    public List<Attribute> getSortList(){
+    public List<Attribute> getSortList() {
         return attributeService.findAll();
     }
 }

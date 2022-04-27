@@ -19,9 +19,10 @@ public class AttributeServiceImpl implements AttributeService {
     AttributeMapper attributeMapper;
     @Autowired
     GoodsDao goodsDao;
+
     @Override
     public int selectIdByAName(String name) {
-        System.out.println("Service Impl ============"+name);
+        System.out.println("Service Impl ============" + name);
         int aId = attributeMapper.selectIdByName(name);
         return aId;
     }
@@ -29,8 +30,8 @@ public class AttributeServiceImpl implements AttributeService {
     @Override
     public List<Attribute> findAll() {
         List<Attribute> attributesList = attributeMapper.findAll();
-        for (Attribute a:
-             attributesList) {
+        for (Attribute a :
+                attributesList) {
             System.out.println(a);
 
         }

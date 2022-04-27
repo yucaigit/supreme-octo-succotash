@@ -37,7 +37,8 @@ public class Goods implements Serializable {
 
     private Integer gA;
 
-    private String gB;
+//    商品状态 0为未上架 1为上架
+    private Integer gB;
 
     private String gC;
 

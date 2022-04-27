@@ -2,9 +2,7 @@ package com.etc.demo.dao;
 
 
 import com.etc.demo.entity.Goods;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -32,7 +30,7 @@ public interface GoodsDao {
 
     boolean saveGoods(String name, int gAttributes, String img1, String price, String senTime, Integer id, String adress, String textarea);
 
-    int selectgIdByName(String name,String img);
+    int selectgIdByName(String name, String img);
 
     @Select("select *from goods")
     List<Goods> getAll();
@@ -42,4 +40,16 @@ public interface GoodsDao {
 
     @Select("select *from goods where g_adress like #{adress}")
     List<Goods> seleAllLikeAdress(String adress);
+
+    @Update("update goods set g_b=#{param1} where g_id=#{param2}")
+    boolean changeGb(int a, Integer gid);
+
+    @Update("update goods set g_name=#{param2},g_adress=#{param3},g_describe=#{param4} where g_id = #{param1}")
+    boolean updateGoods(Integer gId, String gName, String gAdress, String gDescribe);
+
+    @Delete("delete from goods where g_id = #{gid}")
+    boolean deleteGoodsById(Integer gid);
+
+    //update goods set g_a=g_a+1 where g_id=#{g_id}
+
 }

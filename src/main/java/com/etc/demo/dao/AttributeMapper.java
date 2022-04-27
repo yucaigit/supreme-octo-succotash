@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
-* @author yucai
-* @description 针对表【attribute】的数据库操作Mapper
-* @createDate 2022-04-15 22:34:56
-* @Entity generator.domain.Attribute
-*/
+ * @author yucai
+ * @description 针对表【attribute】的数据库操作Mapper
+ * @createDate 2022-04-15 22:34:56
+ * @Entity generator.domain.Attribute
+ */
 @Mapper
 @Repository
 public interface AttributeMapper {

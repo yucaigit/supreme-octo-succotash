@@ -35,12 +35,12 @@ public class UserController {
     }
 
     @RequestMapping("/saveAdress")
-    public Boolean saveAdress(Adress adress){
+    public Boolean saveAdress(Adress adress) {
         return userService.saveAdress(adress);
     }
 
     @RequestMapping("/qiugou")
-    public Boolean qiuGou(QiugouEntity qiugouEntity){
+    public Boolean qiuGou(QiugouEntity qiugouEntity) {
         return qiugouService.savaXuQiu(qiugouEntity);
     }
 }

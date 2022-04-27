@@ -6,11 +6,11 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 /**
-* @author yucai
-* @description 针对表【imgs】的数据库操作Mapper
-* @createDate 2022-04-16 16:04:56
-* @Entity generator.domain.Imgs
-*/
+ * @author yucai
+ * @description 针对表【imgs】的数据库操作Mapper
+ * @createDate 2022-04-16 16:04:56
+ * @Entity generator.domain.Imgs
+ */
 @Mapper
 @Repository
 public interface ImgsMapper {

@@ -16,6 +16,7 @@ public class UserServiceImpl implements UserService {
     UsersDao usersDao;
     @Autowired
     AdressMapper adressMapper;
+
     /*
      * @Author yucai
      * @Dream: Code like poem
@@ -43,7 +44,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Boolean saveAdress(Adress adress) {
         int i = adressMapper.insert(adress);
-        if (i>=0) return true;
+        if (i >= 0) return true;
         return false;
     }
 }

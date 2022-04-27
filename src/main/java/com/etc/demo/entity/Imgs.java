@@ -5,23 +5,22 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 
  * @TableName imgs
  */
 @Data
 public class Imgs implements Serializable {
     /**
-     * 
+     *
      */
     private Integer imgId;
 
     /**
-     * 
+     *
      */
     private String imgSrc;
 
     /**
-     * 
+     *
      */
     private Integer gId;
 
