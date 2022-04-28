@@ -50,6 +50,9 @@ public interface GoodsDao {
     @Delete("delete from goods where g_id = #{gid}")
     boolean deleteGoodsById(Integer gid);
 
+    @Select("select *from goods where g_b=1")
+    List<Goods> getAllG();
+
     //update goods set g_a=g_a+1 where g_id=#{g_id}
 
 }

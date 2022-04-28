@@ -22,4 +22,6 @@ public interface GoodsService {
     List<Goods> getFreeGoods();
 
     List<Goods> selectLikeAdress(String adress);
+
+    List<Goods> getAllG();
 }

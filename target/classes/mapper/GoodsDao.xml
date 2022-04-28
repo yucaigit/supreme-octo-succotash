@@ -44,6 +44,7 @@
         and
         a.g_id = b.g_id
     </select>
+
     <select id="selectgIdByName" resultType="java.lang.Integer">
         select g_id from goods where g_name =#{param1} and g_img1 = #{param2}
     </select>

@@ -44,7 +44,6 @@ public class SellController {
 
     ) throws IOException {
         String originalFilename = null;
-        if (true) return null;
         if (!file.isEmpty()) {
             name1 = goodsName;
             price1 = price;
@@ -53,10 +52,13 @@ public class SellController {
             textarea1 = textarea;
             attribute1 = attribute;
             originalFilename = file.getOriginalFilename();
-
+//            String substring = originalFilename.substring(originalFilename.length() - 5);
+//            System.out.println(substring);
             imgsList.add(originalFilename);
+
             File file1 = new File(path + originalFilename);
             if (!file1.getParentFile().exists()) {
+
                 file1.getParentFile().mkdirs();
             }
             file.transferTo(file1);
@@ -68,7 +70,6 @@ public class SellController {
 
     @RequestMapping("/saveGoods")
     public boolean saveGoods() {
-        if (true) return true;
         DateFormat dateFormat = new SimpleDateFormat();
         String senTime = dateFormat.format(new Date());
         return goodsService.saveGoods(name1, attribute1, imgsList.get(0), price1, senTime, id1, adress1, textarea1, imgsList);

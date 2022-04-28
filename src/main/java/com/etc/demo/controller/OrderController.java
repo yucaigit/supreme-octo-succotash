@@ -19,7 +19,6 @@ public class OrderController {
     @RequestMapping("/getOrders")
     public List<Order> getOrder(@RequestParam Integer uid) {
         List<Order> list = orderService.getAll(uid);
-        System.out.println(list);
         return list;
     }
 

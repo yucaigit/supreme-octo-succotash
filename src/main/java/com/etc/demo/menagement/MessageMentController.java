@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 @RestController
 public class MessageMentController {
-
+    private static String phone=null;
     @Autowired
     GoodsDao goodsDao;
 
@@ -43,8 +43,9 @@ public class MessageMentController {
     @RequestMapping("/send")
     public boolean sendMessage(){
         SendMessageUtils sendMessageUtils = new SendMessageUtils();
-        JSONObject jsonObject = sendMessageUtils.sendMessage("17339876393");
-        System.out.println(jsonObject);
+        JSONObject jsonObject = sendMessageUtils.sendMessage("15176502295");
+        String phoneNumber = (String) jsonObject.get("phoneNumber");
+        phone = phoneNumber;
         return true;}
 
     @RequestMapping("/mesage/updateGoods")

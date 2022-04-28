@@ -77,4 +77,9 @@ public class GoodsServiceImpl implements GoodsService {
         String str = "%" + adress + "%";
         return goodsDao.seleAllLikeAdress(str);
     }
+
+    @Override
+    public List<Goods> getAllG() {
+        return goodsDao.getAllG();
+    }
 }

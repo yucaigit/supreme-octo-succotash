@@ -1,5 +1,8 @@
 package com.etc.demo.controller;
 
+import com.etc.demo.dao.AdressMapper;
+import com.etc.demo.dao.OrderDao;
+import com.etc.demo.entity.Adress;
 import com.etc.demo.entity.Goods;
 import com.etc.demo.entity.GoodsEntity;
 import com.etc.demo.entity.SwiperListEntity;
@@ -19,6 +22,8 @@ public class GoodsController {
     private static int sum;
 
     @Autowired
+    AdressMapper adressMapper;
+    @Autowired
     SwiperListService swiperListService;
 
     @Autowired
@@ -26,7 +31,8 @@ public class GoodsController {
 
     @Autowired
     GoodsService goodsService;
-
+    @Autowired
+    OrderDao orderDao;
     //    得到轮播图树据
     @RequestMapping("/findSwiperList")
     public List<SwiperListEntity> swiperList() {
@@ -42,13 +48,17 @@ public class GoodsController {
         List<GoodsEntity> all = jpaGoodsService.findAll();
         return all;
     }
-
+    @RequestMapping("/getAllG")
+    public List<Goods> geAllG(){
+       return goodsService.getAllG();
+    }
     /*根据关键字搜索*/
     @RequestMapping("/search")
     public List<Goods> search(@RequestParam String query) {
-        System.out.println("--------------------------");
+        System.out.println("--------------------------"+query);
         List<Goods> list = goodsService.selectLikeQuery(query);
         if (list.size() > 0) {
+            System.out.println(list);
             return list;
         }
         return null;
@@ -60,7 +70,7 @@ public class GoodsController {
         List<GoodsEntity> all = getAll();
 //        根据 g_a 为热搜等级
         all.sort(GoodsEntity::compareTo);
-        List<GoodsEntity> goodsEntities = all.subList(0, 4);
+        List<GoodsEntity> goodsEntities = all.subList(0, 2);
         return goodsEntities;
     }
 
@@ -70,6 +80,7 @@ public class GoodsController {
 //        给当前g_a+1
         goodsService.updateGA(g_Id);
         GoodsEntity goodsEntity = jpaGoodsService.findById(g_Id).get();
+
         return goodsEntity;
     }
 
@@ -90,9 +101,25 @@ public class GoodsController {
     //    根据Id 获取 商品信息
     @RequestMapping("/getGoodsDetail")
     public Goods getDetail(@RequestParam Integer g_id) {
+
         Goods one = goodsService.findOne(g_id);
         return one;
     }
 
+//    购买商品
+    @RequestMapping("/getAdressByUid")
+    public Adress getAdress(@RequestParam Integer uid){
+        List<Adress> adress = adressMapper.getAdress(uid);
+        Adress adress1 = null;
+        for (Adress adress2 : adress){
+            adress1 = adress2;
+        }
+        return adress1;
+    }
 
+    @RequestMapping("/payGoods")
+    public boolean payGoods(@RequestParam Integer uid,@RequestParam Integer goodsid){
+//        此处应该先删除商品添加到订单
+        return orderDao.addOrder(uid,goodsid);
+    }
 }

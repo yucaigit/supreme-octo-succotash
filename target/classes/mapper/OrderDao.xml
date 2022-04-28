@@ -22,25 +22,40 @@
         from orders
         where order_id = #{orderId,jdbcType=INTEGER}
     </select>
-    <select id="findAll" resultMap="result2">
-        select a.order_id order_id,a.user_id user_id,a.goods_id goods_id,a.order_state order_state,
-        b.g_id g_id, b.g_name g_name,b.g_img1 g_img1,b.g_price g_price from orders a,goods b
-        where a.user_id = #{uid}
-        and a.goods_id = b.g_id
+    <select id="findAll" resultMap="ordermap">
+        select a.order_id order_id,a.user_id user_id,a.goods_id goods_id,a.order_state order_state,b.g_id g_id, b.g_name g_name,b.g_img1 g_img1,b.g_price g_price from orders a,goods b
+ where a.user_id =#{uid} and a.goods_id = b.g_id
     </select>
-    <resultMap id="result2" type="com.etc.demo.entity.Order">
+    <resultMap id="ordermap" type="com.etc.demo.entity.Order">
         <id column="order_id" property="orderId"/>
         <result column="user_id" property="userId"/>
         <result column="goods_id" property="goodsId"/>
         <result column="order_state" property="orderState"/>
         <association property="goods" javaType="com.etc.demo.entity.Goods">
-            <id column="g_id" property="gId"/>
+            <id column="g_id" property="gId"></id>
             <result column="g_name" property="gName"/>
             <result column="g_img1" property="gImg1"/>
             <result column="g_price" property="gPrice"/>
         </association>
-
     </resultMap>
+    <!--    <select id="findAll" resultMap="result2">-->
+<!--        select a.order_id order_id,a.user_id user_id,a.goods_id goods_id,a.order_state order_state,-->
+<!--        b.g_id g_id, b.g_name g_name,b.g_img1 g_img1,b.g_price g_price from orders a,goods b-->
+<!--        where a.user_id = #{uid}-->
+<!--        and a.goods_id = b.g_id-->
+<!--    </select>-->
+<!--    <resultMap id="result2" type="com.etc.demo.entity.Order">-->
+<!--        <id column="order_id" property="orderId"/>-->
+<!--        <result column="user_id" property="userId"/>-->
+<!--        <result column="goods_id" property="goodsId"/>-->
+<!--        <result column="order_state" property="orderState"/>-->
+<!--        <association property="goods" javaType="com.etc.demo.entity.Goods">-->
+<!--            <id column="g_id" property="gId"/>-->
+<!--            <result column="g_name" property="gName"/>-->
+<!--            <result column="g_img1" property="gImg1"/>-->
+<!--            <result column="g_price" property="gPrice"/>-->
+<!--        </association>-->
+<!--    </resultMap>-->
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
         delete from orders
         where order_id = #{orderId,jdbcType=INTEGER}
@@ -112,6 +127,10 @@
                 #{orderAmount,jdbcType=VARCHAR},
             </if>
         </trim>
+    </insert>
+    <insert id="addOrder">
+        insert into orders (user_id, goods_id, shopping_id,
+        order_state) values (#{param1},#{param2},null,2)
     </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.etc.demo.entity.Order">
         update order
