@@ -43,7 +43,7 @@ public class MessageMentController {
     @RequestMapping("/send")
     public boolean sendMessage(){
         SendMessageUtils sendMessageUtils = new SendMessageUtils();
-        JSONObject jsonObject = sendMessageUtils.sendMessage("15176502295");
+        JSONObject jsonObject = sendMessageUtils.sendMessage("17339876393");
         String phoneNumber = (String) jsonObject.get("phoneNumber");
         phone = phoneNumber;
         return true;}

@@ -1,7 +1,9 @@
 package com.etc.demo.controller;
 
 import com.etc.demo.dao.AdressMapper;
+import com.etc.demo.dao.MessageMapper;
 import com.etc.demo.dao.OrderDao;
+import com.etc.demo.dao.UsersDao;
 import com.etc.demo.entity.Adress;
 import com.etc.demo.entity.Goods;
 import com.etc.demo.entity.GoodsEntity;
@@ -32,7 +34,11 @@ public class GoodsController {
     @Autowired
     GoodsService goodsService;
     @Autowired
+    MessageMapper messageMapper;
+    @Autowired
     OrderDao orderDao;
+    @Autowired
+    UsersDao usersDao;
     //    得到轮播图树据
     @RequestMapping("/findSwiperList")
     public List<SwiperListEntity> swiperList() {
@@ -122,4 +128,15 @@ public class GoodsController {
 //        此处应该先删除商品添加到订单
         return orderDao.addOrder(uid,goodsid);
     }
+
+    //?msg='+this.msg+'&&goodsid='+this.request_id+'&&buyid='+this.user.uid
+    @RequestMapping("/submsg")
+    public boolean subMeg(@RequestParam String msg,
+                          @RequestParam Integer goodsid,
+                          @RequestParam Integer buyid){
+       int sellid =  goodsService.findUserId(goodsid);
+       String buyName = usersDao.findUserName(buyid);
+       return messageMapper.addMesage(msg,goodsid,sellid,buyid,buyName);
+    }
+
 }

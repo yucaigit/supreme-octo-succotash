@@ -2,6 +2,7 @@ package com.etc.demo.dao;
 
 import com.etc.demo.entity.Users;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -20,4 +21,7 @@ public interface UsersDao {
     int updateByPrimaryKey(Users record);
 
     Users findUser(String nickName, int uState);
+
+    @Select("select u_name from users where u_id = #{param1}")
+    String findUserName(Integer buyid);
 }

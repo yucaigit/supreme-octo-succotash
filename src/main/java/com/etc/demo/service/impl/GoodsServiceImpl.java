@@ -82,4 +82,9 @@ public class GoodsServiceImpl implements GoodsService {
     public List<Goods> getAllG() {
         return goodsDao.getAllG();
     }
+
+    @Override
+    public int findUserId(Integer goodsid) {
+        return goodsDao.findUserid(goodsid);
+    }
 }

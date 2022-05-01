@@ -5,31 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d988458-1e83-4db5-aa4b-6911d59dfcf0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/entity/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/SellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/SellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/AdressMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/AdressMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/GoodsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/controller/GoodsListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/GoodsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/dao/UsersDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/menagement/MessageMentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/menagement/MessageMentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/GoodsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/etc/demo/service/impl/GoodsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/GoodsDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/GoodsDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/OrderDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/OrderDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/controller/CartController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/controller/GoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/controller/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/controller/SellController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/controller/SellController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/dao/AdressMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/dao/AdressMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/controller/GoodsListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/controller/GoodsListController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/dao/GoodsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/dao/GoodsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/dao/OrderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/dao/OrderDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/dao/UsersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/dao/UsersDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/menagement/MessageMentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/menagement/MessageMentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/service/GoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/service/GoodsService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/service/impl/GoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/service/impl/GoodsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/etc/demo/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/etc/demo/service/impl/OrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/OrderDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/OrderDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -69,6 +61,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/etc/demo/utils" />
@@ -176,6 +169,10 @@
       <workItem from="1651068185207" duration="831000" />
       <workItem from="1651069973491" duration="2886000" />
       <workItem from="1651113257078" duration="19822000" />
+      <workItem from="1651198532473" duration="372000" />
+      <workItem from="1651201352765" duration="135000" />
+      <workItem from="1651213776178" duration="1982000" />
+      <workItem from="1651373322808" duration="11271000" />
     </task>
     <servers />
   </component>

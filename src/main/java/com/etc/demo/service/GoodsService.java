@@ -24,4 +24,6 @@ public interface GoodsService {
     List<Goods> selectLikeAdress(String adress);
 
     List<Goods> getAllG();
+
+    int findUserId(Integer goodsid);
 }

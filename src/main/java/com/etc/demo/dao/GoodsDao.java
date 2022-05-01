@@ -53,6 +53,9 @@ public interface GoodsDao {
     @Select("select *from goods where g_b=1")
     List<Goods> getAllG();
 
+    @Select("select g_uid from goods where g_id = #{param1}")
+    int findUserid(Integer goodsid);
+
     //update goods set g_a=g_a+1 where g_id=#{g_id}
 
 }
