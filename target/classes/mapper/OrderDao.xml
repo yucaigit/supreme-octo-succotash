@@ -7,10 +7,10 @@
         <result column="goods_id" jdbcType="INTEGER" property="goodsId"/>
         <result column="shopping_id" jdbcType="INTEGER" property="shoppingId"/>
         <result column="order_state" jdbcType="INTEGER" property="orderState"/>
-        <result column="order_sendtime" jdbcType="VARCHAR" property="orderSendtime"/>
-        <result column="order_endtime" jdbcType="VARCHAR" property="orderEndtime"/>
+        <result column="order_sendtime" jdbcType="TIMESTAMP" property="orderSendtime"/>
+        <result column="order_endtime" jdbcType="TIMESTAMP" property="orderEndtime"/>
         <result column="order_describe" jdbcType="VARCHAR" property="orderDescribe"/>
-        <result column="order_amount" jdbcType="VARCHAR" property="orderAmount"/>
+        <result column="order_amount" jdbcType="INTEGER" property="orderAmount"/>
     </resultMap>
     <sql id="Base_Column_List">
         order_id, user_id, goods_id, shopping_id, order_state, order_sendtime, order_endtime,
@@ -26,6 +26,33 @@
         select a.order_id order_id,a.user_id user_id,a.goods_id goods_id,a.order_state order_state,b.g_id g_id, b.g_name g_name,b.g_img1 g_img1,b.g_price g_price from orders a,goods b
  where a.user_id =#{uid} and a.goods_id = b.g_id
     </select>
+
+
+    <select id="getOrders" resultMap="result3">
+        select a.order_id order_id,a.user_id user_id,a.goods_id goods_id,a.order_sendtime order_sendtime,
+               a.order_amount order_amount,
+               b.u_id u_id,b.u_name u_name,b.u_phone u_phone,c.g_id g_id,c.g_name g_name,c.g_adress g_adress
+         from orders a,users b,goods c
+         where a.user_id = b.u_id and a.goods_id = c.g_id
+    </select>
+    <resultMap id="result3" type="com.etc.demo.entity.ReturnOrder">
+        <id column="order_id" property="orderId"/>
+        <result column="user_id" property="userId"/>
+        <result column="goods_id" property="goodsId"/>
+        <result column="order_sendtime" property="orderSendtime"/>
+        <result column="order_amount" property="orderAmount"/>
+
+        <association property="users" javaType="com.etc.demo.entity.Users">
+            <id column="u_id" property="uId"/>
+            <result column="u_name" property="uName"/>
+            <result column="u_phone" property="uPhone"/>
+        </association>
+        <association property="goods" javaType="com.etc.demo.entity.Goods">
+            <id column="g_id" property="gId"/>
+            <result column="g_name" property="gName"/>
+            <result column="g_adress" property="gAdress"/>
+        </association>
+    </resultMap>
     <resultMap id="ordermap" type="com.etc.demo.entity.Order">
         <id column="order_id" property="orderId"/>
         <result column="user_id" property="userId"/>

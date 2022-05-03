@@ -5,13 +5,8 @@ import lombok.Data;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-/**
- * order
- *
- * @author
- */
 @Data
-public class Order implements Serializable {
+public class ReturnOrder implements Serializable {
     private Integer orderId;
 
     private Integer userId;
@@ -31,6 +26,6 @@ public class Order implements Serializable {
     private Integer orderAmount;
 
     private Goods goods;
-
+    private Users users;
     private static final long serialVersionUID = 1L;
 }

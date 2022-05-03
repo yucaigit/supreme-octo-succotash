@@ -17,4 +17,7 @@ public interface MessageMapper {
 
     @Insert("insert into message (message,goodsid,sellid,buyid,buyname) values (#{param1},#{param2},#{param3},#{param4},#{param5})")
     boolean addMesage(String msg, Integer goodsid, int sellid, Integer buyid, String buyName);
+
+    @Select("select *from message where sellid = #{param1}")
+    List<Message> getMyMessage(Integer id);
 }

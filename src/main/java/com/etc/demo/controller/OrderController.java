@@ -24,7 +24,9 @@ public class OrderController {
 
     @RequestMapping("/removeOrderById")
     public boolean removeOrderById(@RequestParam Integer oId) {
-        return orderService.deleteById(oId);
+
+
+        return orderService.changeOrderId(oId);
     }
 
     @RequestMapping("/confirmResive")
