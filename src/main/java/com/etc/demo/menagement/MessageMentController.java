@@ -2,10 +2,8 @@ package com.etc.demo.menagement;
 
 import com.etc.demo.dao.GoodsDao;
 import com.etc.demo.dao.MessageMapper;
-import com.etc.demo.entity.Goods;
-import com.etc.demo.entity.Message;
-import com.etc.demo.entity.Order;
-import com.etc.demo.entity.ReturnOrder;
+import com.etc.demo.dao.UsersDao;
+import com.etc.demo.entity.*;
 import com.etc.demo.service.OrderService;
 import com.etc.demo.utils.SendMessageUtils;
 import com.github.pagehelper.PageHelper;
@@ -32,6 +30,9 @@ public class MessageMentController {
     OrderService orderService;
     @Autowired
     MessageMapper messageMapper;
+
+    @Autowired
+    UsersDao usersDao;
     @RequestMapping("/mesage/login")
     public boolean login(){
         return true;
@@ -96,5 +97,10 @@ public class MessageMentController {
     @RequestMapping("/message/getMessage")
     public List<Message> getmyMessage(@RequestParam Integer id){
         return messageMapper.getMyMessage(id);
+    }
+
+    @RequestMapping("/message/getAllUsers")
+    public List<Users> getAlluesers(){
+        return usersDao.getUser();
     }
 }

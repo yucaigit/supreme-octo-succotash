@@ -5,6 +5,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 @Mapper
 public interface UsersDao {
@@ -24,4 +26,10 @@ public interface UsersDao {
 
     @Select("select u_name from users where u_id = #{param1}")
     String findUserName(Integer buyid);
+
+    @Select("select * from users")
+    List<Users> getUser();
+
+    @Select("select *from users where u_id = #{param1}")
+    Users getUserByUserId(Integer userid);
 }
